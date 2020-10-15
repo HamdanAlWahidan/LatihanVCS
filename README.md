@@ -141,6 +141,6 @@ $ cd latihan1``
 
 
 
-#### BY-VAL18
+
 
 ![cat_black_breed_russian_blue_eyes_green_eyes_black_background_81774_1280x720](https://user-images.githubusercontent.com/72790651/95911514-c768fa00-0dcb-11eb-80f1-359fb7203d83.jpg)
