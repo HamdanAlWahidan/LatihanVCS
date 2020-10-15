@@ -1,68 +1,146 @@
-
-Hostinger Tutorial
-
-Halaman utamaGlosarium
-Ariata C. pada Glosarium
-Apa Itu GitHub? Kenali Pengertian dan Fungsinya
-Bagi yang masih baru di dunia website, pastinya akan banyak melontarkan pertanyaan, dan salah satunya adalah ‘Apa itu GitHub?’. GitHub adalah manajemen proyek dan sistem versioning code sekaligus platform jaringan sosial yang dirancang khusus bagi para developer. Lalu, apa saja fungsi GitHub? Dengan platform ini, Anda bisa bekerja bersama-sama dengan rekan dari berbagai berlahan dunia, merencanakan proyek, dan bahkan tracking (melacak) pekerjaan Anda.
-
-GitHub juga merupakan salah satu storehouse online terbesar di dunia untuk pekerjaan kolaborasi.
+# PENGGUNAAN GIT 
 
 
-Apa itu GitHub?
+### APA ITU GIT ?
+* Git adalah salah satu sistem pengontrol versi (Version ControlSystem) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.
+* Pengontrol versi bertugas mencatat setiap perubahan pada fileproyek yang dikerjakan oleh banyak orang maupun sendiri.
+* Git dikenal juga dengan distributed revision control (VCS terdistribusi),artinya penyimpanan database Git tidak hanya berada dalam satutempat saja.
 
-Isi
 
-Apa Itu Git?
-Apa Itu Hub?
-Repositori
-Branch
-Pull Request
-Forking Repositori
-GitHub Bisa Digunakan Oleh Siapa Saja, Tidak Hanya Developer
-Apa Itu Git?
-Sebelum membahas topik ini lebih lanjut, Anda harus tahu dan paham kalau Git adalah inti atau jantung GitHub. Git merupakan sistem pengontrol versi yang dikembangkan oleh Linus Torvalds (yang juga menciptakan dan mengembangkan Linux).
+### INSTALASI GIT
+* Download *Git*, buka website resminya Git `(git-scm.com)`.
+* Kemudian unduh Git sesuai dengan arsitektur komputer kita. Kalau menggunakan 64bit, unduh yang 64bit. Begitu juga kalau menggunakan 32bit.
+* Selamat, Git sudah terinstal di Windows. Untuk mencobanya,silahkan buka *CMD* atau *PowerShell*, kemudian ketik perintah
 
-Apa Itu Sistem Pengontrol Versi?
-Pada saat developer membuat proyek baru, mereka selalu dan akan terus-menerus melakukan pembaruan terhadap kodenya. Bahkan setelah proyeknya online, developer tetap harus mengupdate versinya, memperbaiki bug, menambahkan fitur baru, dan lain sebagainya.
+``git --version``
 
-Sistem pengontrol versi membantu para developer dalam melacak perubahan yang mereka lakukan terhadap basis kode. Tak hanya itu, sistem ini juga mencatat siapa saja yang membuat perubahan serta me-restore kode yang telah dihapus atau dimodifikasi.
+![photo_2020-10-14_02-36-53](https://user-images.githubusercontent.com/72790651/95907712-29266580-0dc6-11eb-819c-89f04a853fc8.jpg)
 
-Karena Git menyimpan banyak salinan kode di repositori, maka tidak ada kode yang saling tertimpa. Silakan baca artikel ini untuk mengetahui lebih banyak tentang Git.
 
-Apa Itu Hub?
-Jika Git adalah jantung, maka Hub adalah jiwa GitHub. Sistem Hub yang ada pada GitHub berfungsi untuk mengubah baris perintah (command line), seperti Git, menjadi jaringan media sosial terbesar bagi para developer.
+### Menambahkan Global Config
+* Pada saat pertama kali menggunakan git, perlu dilakukan konfigurasi ``user.name dan user.email``
+* konfigurasi ini bisa dilakukan untuk global repostiry atau individual repository.
 
-Selain berkontribusi dalam proyek tertentu, GitHub juga memungkinkan usernya untuk berkomunikasi dengan orang-orang yang memiliki kesamaan visi dan misi. Anda bahkan bisa follow mereka dan melihat proyek yang dilakukan atau bahkan mencari tahu siapa saja yang terhubung dengan mereka.
+* apabila belum dilakukan konfigurasi, akan mengakibatkan terjadi kegagalan saat menjalankan perintah `git commit`
 
-Repositori
-Repositori atau repo adalah direktori penyimpanan file proyek. Di sini, Anda bisa menyimpan apa pun yang berkaitan dengan proyek yang sedang dibuat, misalnya file kode, gambar, atau audio. Repo sendiri bertempat di penyimpanan atau storage GitHub atau repositori lokal di komputer Anda.
+* Config Global Repository
 
-Branch
-Brach merupakan salinan dari repositori milik Anda. Branch digunakan ketika Anda hendak melakukan suatu pengembangan atau development secara terpisah.
+`$ git config --global user.name “nama_user"`
 
-Pekerjaan atau task yang dilakukan di branch tidak akan memengaruhi repositori pusat atau branch lainnya. Jika pengembangannya sudah selesai, Anda bisa menggabungkan branch saat ini ke branch lainnya dah juga repositori pusat dengan menggunakan pull request.
+`$ git config --global user.email “nama_user”`
 
-Pull Request
-Pull request adalah ketika Anda menginformasikan user bahwa Anda sudah push perubahan yang dilakukan di branch ke master repositori. Collaborator repositori akan menerima atau menolak pull request. Segera setelah pull request diterima, Anda bisa mendiskusikan dan mengulas proyek bersama dengan collaborator.
 
-Berikut beberapa langkah untuk membuat pull request di GitHub:
+### Perintah Dasar Git
 
-Masuk ke repositori dan cari menu branch.
-Di menu branch, pilih branch yang menyimpan commit Anda.
-Klik opsi New pull request yang ada di samping menu branch.
-Masukkan judul dan deskripsi pull request.
-Klik opsi Create pull request.
-Forking Repositori
-Forking repositori artinya Anda membuat proyek baru berdasarkan repositori yang sudah ada. Dalam kalimat yang lebih sederhana, forking repo berarti Anda menyalin repositori yang sudah ada, kemudian membuat beberapa perubahan yang diperlukan, lalu menyimpan versi terbarunya sebagai repositori baru, dan menjadikannya proyek Anda sendiri.
+* `git init`, perintah untuk membuat repository local
+* `git add`, perintah untuk menambahkan file baru, atau perubahan pada file pada staging sebelum proses commit.
+* `git commit`, perintah untuk menyimpan perubahan kedalam database git.
+* `git push -u origin master`, perintah untuk mengirim perubahan pada repository local menuju server repository.
+* `git clone [url]`, perintah untuk membuat working directory yang diambil dari repositry sever.
+* `git remote add origin [url]`, perintah untuk menambahkan remote server/reopsitory server pada local repositry ``(working directory)``
+* `git pull`, perintah untuk mengambil/mendownload perubahan terbaru dari server repository ke local repository
 
-Fitur ini akan memperbaiki serta meningkatkan pengembangan proyek yang dilakukan. Karena proyek hasil forking masih baru, maka tidak akan terjadi apa-apa di repositori pusat. Perubahan yang dilakukan di repositori master juga dapat diterapkan di forking Anda saat ini.
 
-Berikut dua langkah untuk forking repositori GitHub:
+### Membuat Reposiory Local
 
-Cari repositori yang ingin di-forking.
-Klik opsi Fork.
-GitHub Bisa Digunakan Oleh Siapa Saja, Tidak Hanya Developer
-GitHub memang berperan sangat penting dalam memuluskan pekerjaan developer. Namun, platform ini tidak terpaku pada developer saja. Siapa pun bisa menggunakannya untuk mengelola proyek dan bekerja bersama-sama dengan rekan lainnya.
+* Buka direktory aktif, misal: *d:\labs_pemrograman1* (buka menggunakan Windows Explorer)
+* klik kanan pada direktory aktif tersebut, dan pilih menu *Git Bash*, sehingga muncul git bash commad
+* Buat direktory project praktikum pertama dengan nama *latihan1*
+``$ mkdir latihan1
+$ cd latihan1``
+* Sehingga terbentuk satu direktori baru dibawahnya, selanjutnya masuk kedalam direktori tersebut dengan perintah *cd* ``(change directory)``
+* direktory aktif menjadi: **d:\labs_pemrograman1\latihan1
 
-Jika saat ini Anda dan tim sedang mengerjakan proyek yang harus diupdate secara berkala dan ingin melacak serta menyimpan perubahan apa pun yang terjadi, maka GitHub merupakan platform yang tepat untuk aktivitas seperti ini. Alternatif GitHub lainnya yang boleh Anda lirik adalah GitLab, BitBucket.
+
+### Membuat Reposiory Local
+
+* Jalankan perintah *git init*, untuk membuat repository local.
+`$ git init`
+* Repository baru berhasil di inisialisasi, dengan terbentuknya satu direktori hidden dengan nama .*git*
+* Pada direktori tersebut, semua perubahan pada `working directory` akan disimpan.
+
+
+### Menambahkan File baru pada repository
+
+* Untuk membuat file dapat menggunakan text editor, lalu menyimpan filenya pada direktori aktif (repository)
+* disini kita akan coba buat satu file bernama README.md (text file)
+`$ echo “# Latihan 1” >> README.md`
+* File *README.md* berhasil dibuat.
+
+![photo_2020-10-14_02-39-16](https://user-images.githubusercontent.com/72790651/95907983-92a67400-0dc6-11eb-8545-aebcbc6d1a09.jpg)
+
+### Menambahkan File baru pada repository
+
+* Untuk menambahkan file yang baru saja dibuat tersebut gunakan perintah git add.
+`$ git add README.md`
+* File *README.md* berhasil ditambahkan.
+
+![photo_2020-10-14_02-56-22](https://user-images.githubusercontent.com/72790651/95909668-14979c80-0dc9-11eb-8050-c8c3c0459298.jpg)
+
+### `Commit` (Menyimpan perubahan ke database)
+
+* Untuk menyimpan perubahan yang ada kedalam database repository local, gunakan perintah git commit -m “komentar commit”
+`$ git commit -m “File pertama saya”`
+* Perubahan berhasil disimpan.
+
+![photo_2020-10-14_02-49-49](https://user-images.githubusercontent.com/72790651/95909911-7821ca00-0dc9-11eb-90af-688f07c62aae.jpg)
+
+### Membuat repository server
+
+* Server reopsitory yang akan kita gunakan adalah (http://github.com)
+* Anda harus membuat akun terlebih dahulu.
+* Pada laman github, klik tombol start a project, atau
+* Dari menu (icon +) klik New Repository
+
+![photo_2020-10-14_02-52-26](https://user-images.githubusercontent.com/72790651/95910140-cc2cae80-0dc9-11eb-9d1b-308a5332b20c.jpg)
+
+### Membuat repository server
+
+* Isi nama repositorynya, misal: labpy1.
+* lalu klik tombol Create repository
+
+![photo_2020-10-14_02-49-50](https://user-images.githubusercontent.com/72790651/95910427-42311580-0dca-11eb-8787-b8d9519b7682.jpg)
+
+### Menambahkan Remote Repository
+
+* Remote Repository merupakan repository server yang akan digunakan untuk menyimpan setiap perubahan pada local repository, sehingga dapat diakses oleh banyak user.
+* Untuk menambahkan remote repository server, gunakan perintah *git remote add origin [url]*
+`$ git remote add origin https://github.com/noval1802/LatihanVCS.git`
+
+
+### Push (Mengirim perubahan ke server)
+
+* Untuk mengirim perubahan pada local repository ke server gunakan perintah git push.
+`$ git push -u origin master`
+* Perintah ini akan meminta memasukkan username dan password pada akun github.com
+
+![photo_2020-10-14_02-49-50 (2)](https://user-images.githubusercontent.com/72790651/95910887-f29f1980-0dca-11eb-8663-e7689e4d25e3.jpg)
+
+
+### Melihat hasilnya pada server repository
+
+* Buka laman github.com, arahkan pada repositorinya.
+* Maka perubahan akan terlihat pada laman tersebut.
+
+![photo_2020-10-14_02-49-50 (3)](https://user-images.githubusercontent.com/72790651/95911083-309c3d80-0dcb-11eb-82da-32e3ffa60e6c.jpg)
+
+
+### Clone Repository
+
+* Clone repository, pada dasarnya adalah meng-copy repository server dan secara otomatis membuat satu direktory sesuai dengan nama repositorynya (working directory).
+* Untuk melakukan cloning, gunakan perintah `git clone [url]`
+
+![photo_2020-10-14_02-49-50 (4)](https://user-images.githubusercontent.com/72790651/95911303-807b0480-0dcb-11eb-9987-3917daf42b1e.jpg)
+
+### Kegunaan file README.md
+
+* Apabila kita menggunakan github, untuk memberikan penjelasan awal pada project yang kita buat, maka dapat menggunakan sebuah file yang bernama README.md
+* Pada file tersebut kita dapat membuat dokumentasi awal dari setiap project yang kita buat untuk memberikan penjelasan atau sekedar cara penggunaan dari aplikasi yang kita kembangkan.
+* Penulisan file README.md berbasis teks, dan untuk pemformatannya menggunakan Markdown format.
+* untuk lebih jelasnya, dapat anda pelajari cara penggunaan markdown pada url berikut: https://guides.github.com/features/masteringmarkdown/
+
+
+
+#### BY-VAL18
+
+![cat_black_breed_russian_blue_eyes_green_eyes_black_background_81774_1280x720](https://user-images.githubusercontent.com/72790651/95911514-c768fa00-0dcb-11eb-80f1-359fb7203d83.jpg)
