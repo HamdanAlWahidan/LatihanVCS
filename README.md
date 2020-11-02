@@ -14,7 +14,7 @@
 
 ``git --version``
 
-![photo_2020-10-14_02-36-53](C:\Users\Fin\Pictures\Tugas Latihan Python\Hasil LAB1.png)
+![photo_2020-10-14_02-36-53](https://github.com/HamdanAlWahidan/LatihanVCS/issues/1#issue-734386134)
 
 
 ### Menambahkan Global Config
