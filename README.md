@@ -14,7 +14,7 @@
 
 ``git --version``
 
-![photo_2020-10-14_02-36-53](https://github.com/HamdanAlWahidan/LatihanVCS/issues/1#issue-734386134)
+![Hasil LAB1](https://user-images.githubusercontent.com/72789338/97857908-fa4e4000-1d30-11eb-99e9-f4a1ab7fdbf8.png)
 
 
 ### Menambahkan Global Config
