@@ -14,7 +14,7 @@
 
 ``git --version``
 
-![photo_2020-10-14_02-36-53](https://user-images.githubusercontent.com/72790651/95907712-29266580-0dc6-11eb-819c-89f04a853fc8.jpg)
+![photo_2020-10-14_02-36-53](C:\Users\Fin\Pictures\Tugas Latihan Python\Hasil LAB1.png)
 
 
 ### Menambahkan Global Config
